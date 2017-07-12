@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<servlet>
+		<servlet-name>ServletTest</servlet-name>
+		<servlet-class>chen.servlet.ServletTest</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>GiraffeTree</param-value>
+		</init-param>
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>123456</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Servlet1</servlet-name>
+		<servlet-class>chen.communication.Servlet1</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>Servlet2</servlet-name>
+		<servlet-class>chen.communication.Servlet2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ServletTest</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletTest</servlet-name>
+		<url-pattern>/1</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletTest</servlet-name>
+		<url-pattern>/he/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Servlet1</servlet-name>
+		<url-pattern>/Servlet1</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Servlet2</servlet-name>
+		<url-pattern>/Servlet2</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>age</param-name>
+		<param-value>100</param-value>
+	</context-param>
+
+</web-app>
