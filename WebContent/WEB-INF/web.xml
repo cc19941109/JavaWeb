@@ -51,4 +51,9 @@
 		<param-name>age</param-name>
 		<param-value>100</param-value>
 	</context-param>
+	
+	<!-- 设置Session的有效时间:以分钟为单位-->
+	<session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
 </web-app>

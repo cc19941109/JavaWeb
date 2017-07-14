@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.catalina.connector.Response;
+
 /**
  * @author gacl
  * 删除cookie
@@ -22,6 +24,7 @@ public class CookieDelete extends HttpServlet {
         //将cookie的有效期设置为0，命令浏览器删除该cookie
         cookie.setMaxAge(0);
         response.addCookie(cookie);
+       //new Response().generateCookieString(this.)
         
     }
 
